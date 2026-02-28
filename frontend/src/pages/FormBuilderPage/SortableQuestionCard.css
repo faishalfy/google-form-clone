@@ -1,0 +1,100 @@
+/**
+ * SortableQuestionCard Styles
+ * 
+ * Styles for drag-and-drop functionality
+ */
+
+.sortable-question-wrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  position: relative;
+  margin-bottom: 1rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.sortable-question-wrapper.is-dragging {
+  opacity: 0.9;
+  z-index: 100;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+  background: white;
+  border-radius: 8px;
+}
+
+.sortable-question-content {
+  flex: 1;
+  min-width: 0;
+}
+
+/* Drag Handle */
+.drag-handle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border: none;
+  background: transparent;
+  border-radius: 4px;
+  cursor: grab;
+  color: #9aa0a6;
+  transition: all 0.2s;
+  flex-shrink: 0;
+  margin-top: 1rem;
+}
+
+.drag-handle:hover {
+  background: #f1f3f4;
+  color: #5f6368;
+}
+
+.drag-handle:active {
+  cursor: grabbing;
+  background: #e8eaed;
+}
+
+.drag-handle:focus {
+  outline: 2px solid #4285f4;
+  outline-offset: 2px;
+}
+
+/* When dragging is in progress */
+.is-dragging .drag-handle {
+  cursor: grabbing;
+  color: #4285f4;
+  background: #e8f0fe;
+}
+
+/* Drag overlay (the element being dragged) */
+.drag-overlay {
+  opacity: 0.95;
+  transform: scale(1.02);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+}
+
+/* Drop indicator */
+.drop-indicator {
+  height: 4px;
+  background: #4285f4;
+  border-radius: 2px;
+  margin: 0.5rem 0;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.drop-indicator.active {
+  opacity: 1;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .drag-handle {
+    width: 28px;
+    height: 28px;
+  }
+  
+  .sortable-question-wrapper {
+    gap: 0.25rem;
+  }
+}

@@ -1,0 +1,226 @@
+/**
+ * QuestionBuilderCard Component Styles
+ */
+
+.question-builder-card {
+  background-color: var(--color-background);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  border-left: 4px solid var(--color-border);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.question-builder-card:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.question-builder-card.is-new {
+  border-left-color: var(--color-success);
+  background-color: rgba(40, 167, 69, 0.02);
+}
+
+.question-builder-card.is-modified {
+  border-left-color: var(--color-warning);
+}
+
+/* Card Header */
+.question-builder-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1rem 0.75rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.question-number {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.required-badge,
+.new-badge,
+.modified-badge {
+  font-size: 0.625rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 0.125rem 0.375rem;
+  border-radius: 4px;
+}
+
+.required-badge {
+  background-color: var(--color-danger);
+  color: white;
+}
+
+.new-badge {
+  background-color: var(--color-success);
+  color: white;
+}
+
+.modified-badge {
+  background-color: var(--color-warning);
+  color: white;
+}
+
+.question-builder-actions {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.action-btn {
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  background-color: var(--color-background);
+  color: var(--color-text-light);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 0.875rem;
+}
+
+.action-btn:hover:not(:disabled) {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.action-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.action-btn.delete-btn:hover:not(:disabled) {
+  border-color: var(--color-danger);
+  color: var(--color-danger);
+}
+
+/* Card Body */
+.question-builder-body {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Options Section */
+.question-options-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.options-label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-text);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.options-hint {
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: var(--color-text-light);
+}
+
+.options-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.option-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.option-indicator {
+  width: 1.5rem;
+  text-align: center;
+  color: var(--color-text-light);
+  flex-shrink: 0;
+}
+
+.option-row .input-group {
+  flex: 1;
+}
+
+.remove-option-btn {
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  background-color: var(--color-background);
+  color: var(--color-text-light);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+
+.remove-option-btn:hover:not(:disabled) {
+  border-color: var(--color-danger);
+  color: var(--color-danger);
+}
+
+.remove-option-btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+/* Required Section */
+.question-required-section {
+  padding-top: 0.5rem;
+  border-top: 1px solid var(--color-border);
+}
+
+/* Card Footer */
+.question-builder-footer {
+  padding: 0.75rem 1rem 1rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .question-builder-header {
+    flex-direction: column;
+    gap: 0.75rem;
+    align-items: stretch;
+  }
+
+  .question-builder-actions {
+    justify-content: flex-end;
+  }
+
+  .option-row {
+    flex-wrap: wrap;
+  }
+
+  .option-row .input-group {
+    flex: 1 1 100%;
+    order: 1;
+    margin-top: 0.25rem;
+  }
+
+  .option-indicator {
+    order: 0;
+  }
+
+  .remove-option-btn {
+    order: 0;
+    margin-left: auto;
+  }
+}

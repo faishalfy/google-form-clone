@@ -1,0 +1,37 @@
+/**
+ * CheckboxGroup Component Styles
+ */
+
+.checkbox-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.checkbox-group-label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-text);
+  margin-bottom: 0.25rem;
+}
+
+.checkbox-group-required {
+  color: var(--color-danger);
+  margin-left: 0.25rem;
+}
+
+.checkbox-group-options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+
+/* Error state */
+.checkbox-group.checkbox-group-error .checkbox-custom {
+  border-color: var(--color-danger);
+}
+
+.checkbox-group-error-message {
+  font-size: 0.75rem;
+  color: var(--color-danger);
+}

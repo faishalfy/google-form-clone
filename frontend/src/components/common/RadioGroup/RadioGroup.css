@@ -1,0 +1,113 @@
+/**
+ * RadioGroup Component Styles
+ */
+
+.radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.radio-group-label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-text);
+  margin-bottom: 0.25rem;
+}
+
+.radio-group-required {
+  color: var(--color-danger);
+  margin-left: 0.25rem;
+}
+
+.radio-group-options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+
+.radio-option {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+.radio-input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.radio-custom {
+  width: 1.25rem;
+  height: 1.25rem;
+  border: 2px solid var(--color-border);
+  border-radius: 50%;
+  background-color: var(--color-background);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+/* Radio dot */
+.radio-custom::after {
+  content: '';
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background-color: white;
+  transform: scale(0);
+  transition: transform 0.2s ease;
+}
+
+/* Selected state */
+.radio-input:checked + .radio-custom {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.radio-input:checked + .radio-custom::after {
+  transform: scale(1);
+}
+
+/* Focus state */
+.radio-input:focus + .radio-custom {
+  box-shadow: 0 0 0 3px rgba(103, 58, 183, 0.2);
+}
+
+/* Hover state */
+.radio-option:hover .radio-custom {
+  border-color: var(--color-primary);
+}
+
+/* Disabled state */
+.radio-input:disabled + .radio-custom {
+  background-color: var(--color-gray-100);
+  border-color: var(--color-border);
+  cursor: not-allowed;
+}
+
+.radio-input:disabled ~ .radio-text {
+  color: var(--color-text-light);
+}
+
+.radio-text {
+  font-size: 0.9375rem;
+  color: var(--color-text);
+  line-height: 1.4;
+}
+
+/* Error state */
+.radio-group.radio-group-error .radio-custom {
+  border-color: var(--color-danger);
+}
+
+.radio-group-error-message {
+  font-size: 0.75rem;
+  color: var(--color-danger);
+}

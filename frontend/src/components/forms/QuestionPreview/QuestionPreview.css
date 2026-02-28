@@ -1,0 +1,76 @@
+/**
+ * QuestionPreview Component Styles
+ */
+
+.question-preview {
+  background-color: var(--color-background);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.question-preview-header {
+  margin-bottom: 1rem;
+}
+
+.question-preview-text {
+  font-size: 1rem;
+  color: var(--color-text);
+}
+
+.required-indicator {
+  color: var(--color-danger);
+  margin-left: 0.25rem;
+}
+
+.question-preview-body {
+  margin-top: 0.75rem;
+}
+
+.preview-input,
+.preview-textarea,
+.preview-select {
+  width: 100%;
+  padding: 0.5rem 0;
+  font-size: 0.875rem;
+  border: none;
+  border-bottom: 1px solid var(--color-border);
+  background: transparent;
+  color: var(--color-text-light);
+}
+
+.preview-input:disabled,
+.preview-textarea:disabled,
+.preview-select:disabled {
+  cursor: default;
+}
+
+.preview-textarea {
+  resize: none;
+}
+
+.preview-select {
+  cursor: default;
+}
+
+.preview-options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.preview-option {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  cursor: default;
+}
+
+.preview-option input {
+  cursor: default;
+}
+
+.preview-option span {
+  color: var(--color-text);
+}

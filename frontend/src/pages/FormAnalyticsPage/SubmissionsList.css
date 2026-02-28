@@ -1,0 +1,168 @@
+/**
+ * Submissions List Styles
+ */
+
+.submissions-list {
+  width: 100%;
+}
+
+.list-card {
+  padding: 0;
+  overflow: hidden;
+}
+
+.list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #e8eaed;
+  background: #f8f9fa;
+}
+
+.list-header h3 {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #202124;
+  margin: 0;
+}
+
+.submission-count {
+  font-size: 0.875rem;
+  color: #5f6368;
+}
+
+/* Table */
+.list-table-wrapper {
+  overflow-x: auto;
+}
+
+.submissions-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.submissions-table th,
+.submissions-table td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid #e8eaed;
+}
+
+.submissions-table th {
+  background: #f8f9fa;
+  font-weight: 500;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: #5f6368;
+}
+
+.submissions-table td {
+  font-size: 0.875rem;
+  color: #202124;
+}
+
+.submissions-table tbody tr:hover {
+  background: #f8f9fa;
+}
+
+.anonymous {
+  color: #9aa0a6;
+}
+
+/* Pagination */
+.list-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  border-top: 1px solid #e8eaed;
+}
+
+.page-info {
+  font-size: 0.875rem;
+  color: #5f6368;
+}
+
+/* Submission Detail Modal */
+.submission-detail {
+  padding: 1rem;
+}
+
+.submission-info {
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.info-item {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.info-item:last-child {
+  margin-bottom: 0;
+}
+
+.info-label {
+  font-weight: 500;
+  color: #5f6368;
+  min-width: 80px;
+}
+
+.info-value {
+  color: #202124;
+}
+
+.submission-answers h4 {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #202124;
+  margin: 0 0 1rem 0;
+}
+
+.answer-item {
+  padding: 1rem;
+  border: 1px solid #e8eaed;
+  border-radius: 8px;
+  margin-bottom: 0.75rem;
+}
+
+.answer-question {
+  font-weight: 500;
+  color: #202124;
+  margin-bottom: 0.5rem;
+}
+
+.answer-question .required {
+  color: #ea4335;
+  margin-left: 0.25rem;
+}
+
+.answer-value {
+  color: #5f6368;
+  padding-left: 1rem;
+  border-left: 3px solid #4285f4;
+}
+
+.no-answer {
+  color: #9aa0a6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .list-header {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+
+  .submissions-table th,
+  .submissions-table td {
+    padding: 0.5rem;
+    font-size: 0.75rem;
+  }
+}

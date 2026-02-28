@@ -1,0 +1,232 @@
+/**
+ * Respond Form Page Styles
+ * 
+ * Clean, modern styling for the form respondent view.
+ * Follows Google Forms visual language.
+ */
+
+.respond-form-page {
+  min-height: 100vh;
+  background-color: var(--color-gray-50);
+  padding: 2rem 1rem;
+}
+
+.respond-form-container {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+/* Form Header */
+.respond-form-header {
+  background-color: var(--color-background);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  border-top: 10px solid var(--color-primary);
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.respond-form-title {
+  font-size: 1.75rem;
+  font-weight: 400;
+  color: var(--color-text);
+  margin: 0 0 0.5rem 0;
+  line-height: 1.3;
+}
+
+.respond-form-description {
+  font-size: 0.9375rem;
+  color: var(--color-text-light);
+  margin: 0 0 1rem 0;
+  line-height: 1.5;
+}
+
+.respond-form-required-note {
+  font-size: 0.8125rem;
+  color: var(--color-text-light);
+  margin: 0;
+  padding-top: 1rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.required-asterisk {
+  color: var(--color-danger);
+  margin-left: 0.25rem;
+}
+
+/* Questions Container */
+.respond-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.questions-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Question Card */
+.question-card {
+  background-color: var(--color-background);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 1.5rem;
+  transition: border-color 0.2s ease;
+}
+
+.question-card:hover {
+  border-color: var(--color-primary-light);
+}
+
+.question-card.has-error {
+  border-color: var(--color-danger);
+  border-left: 4px solid var(--color-danger);
+}
+
+.question-header {
+  margin-bottom: 1rem;
+}
+
+.question-title {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--color-text);
+  line-height: 1.5;
+}
+
+.question-input {
+  width: 100%;
+}
+
+/* Override some component styles for cleaner look in form context */
+.question-input .input-group,
+.question-input .textarea-group,
+.question-input .select-group {
+  margin-bottom: 0;
+}
+
+.question-input .input-label,
+.question-input .textarea-label,
+.question-input .select-label {
+  display: none;
+}
+
+/* No Questions Message */
+.no-questions-message {
+  background-color: var(--color-background);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 3rem 1.5rem;
+  text-align: center;
+  color: var(--color-text-light);
+}
+
+/* Form Actions */
+.respond-form-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+/* Submission Success */
+.submission-success {
+  background-color: var(--color-background);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  border-top: 10px solid var(--color-success);
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+
+.success-icon {
+  width: 4rem;
+  height: 4rem;
+  margin: 0 auto 1.5rem;
+  background-color: var(--color-success);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.success-title {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--color-text);
+  margin: 0 0 0.75rem 0;
+}
+
+.success-message {
+  font-size: 1rem;
+  color: var(--color-text-light);
+  margin: 0 0 2rem 0;
+  line-height: 1.5;
+}
+
+.success-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+/* Form Not Available */
+.form-not-available {
+  background-color: var(--color-background);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.form-not-available h2 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--color-text);
+  margin: 0 0 1rem 0;
+}
+
+.form-not-available p {
+  font-size: 1rem;
+  color: var(--color-text-light);
+  margin: 0 0 2rem 0;
+  line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .respond-form-page {
+    padding: 1rem 0.5rem;
+  }
+
+  .respond-form-header,
+  .question-card,
+  .submission-success {
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+  }
+
+  .respond-form-actions {
+    flex-direction: column-reverse;
+    gap: 0.75rem;
+  }
+
+  .respond-form-actions button {
+    width: 100%;
+  }
+
+  .success-actions {
+    flex-direction: column;
+  }
+
+  .success-actions button,
+  .success-actions a {
+    width: 100%;
+  }
+}

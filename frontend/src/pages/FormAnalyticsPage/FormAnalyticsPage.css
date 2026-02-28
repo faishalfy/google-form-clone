@@ -1,0 +1,156 @@
+/**
+ * Form Analytics Page Styles
+ * 
+ * Responsive layout for the analytics dashboard.
+ * Mobile-first design with flexible grid.
+ */
+
+.analytics-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Header */
+.analytics-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.analytics-header-left,
+.analytics-header-right {
+  flex-shrink: 0;
+}
+
+.analytics-header-center {
+  flex: 1;
+  text-align: center;
+  min-width: 200px;
+}
+
+.analytics-title {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #202124;
+  margin: 0 0 0.25rem 0;
+}
+
+.analytics-subtitle {
+  font-size: 0.875rem;
+  color: #5f6368;
+  margin: 0;
+}
+
+/* Summary Cards */
+.analytics-summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.summary-card {
+  text-align: center;
+  padding: 1.5rem;
+}
+
+.summary-value {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #4285f4;
+  margin-bottom: 0.5rem;
+}
+
+.summary-label {
+  font-size: 0.875rem;
+  color: #5f6368;
+}
+
+/* View Toggle */
+.view-toggle {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+/* Charts Grid */
+.analytics-charts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Empty State */
+.analytics-empty {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+}
+
+.empty-card {
+  text-align: center;
+  padding: 3rem;
+  max-width: 400px;
+}
+
+.empty-icon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.empty-card h2 {
+  font-size: 1.5rem;
+  color: #202124;
+  margin-bottom: 0.5rem;
+}
+
+.empty-card p {
+  color: #5f6368;
+  margin-bottom: 1.5rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .analytics-page {
+    padding: 1rem;
+  }
+
+  .analytics-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .analytics-header-left,
+  .analytics-header-right {
+    display: flex;
+    justify-content: center;
+  }
+
+  .analytics-header-center {
+    order: -1;
+  }
+
+  .analytics-title {
+    font-size: 1.5rem;
+  }
+
+  .analytics-charts {
+    grid-template-columns: 1fr;
+  }
+
+  .summary-value {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .analytics-summary {
+    grid-template-columns: 1fr;
+  }
+}

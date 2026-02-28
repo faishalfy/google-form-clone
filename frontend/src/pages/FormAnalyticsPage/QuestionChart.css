@@ -1,0 +1,165 @@
+/**
+ * Question Chart Styles
+ */
+
+.question-chart-card {
+  padding: 1.5rem;
+}
+
+.question-chart-header {
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e8eaed;
+}
+
+.question-title {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #202124;
+  margin: 0 0 0.5rem 0;
+}
+
+.required-badge {
+  color: #ea4335;
+  margin-left: 0.25rem;
+}
+
+.question-meta {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.75rem;
+  color: #5f6368;
+}
+
+.question-type {
+  background: #e8f0fe;
+  color: #1a73e8;
+  padding: 0.125rem 0.5rem;
+  border-radius: 4px;
+}
+
+.response-count {
+  color: #5f6368;
+}
+
+.question-chart-body {
+  min-height: 200px;
+}
+
+/* No responses state */
+.no-responses {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  color: #5f6368;
+  font-style: italic;
+}
+
+/* Chart tooltip */
+.chart-tooltip {
+  background: white;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  border: 1px solid #e8eaed;
+}
+
+.tooltip-label {
+  font-weight: 500;
+  color: #202124;
+  margin: 0 0 0.25rem 0;
+}
+
+.tooltip-value {
+  color: #5f6368;
+  margin: 0;
+  font-size: 0.875rem;
+}
+
+/* Word Frequency View */
+.word-frequency-view {
+  padding: 1rem 0;
+}
+
+.word-cloud {
+  margin-bottom: 1.5rem;
+}
+
+.word-cloud h4 {
+  font-size: 0.875rem;
+  color: #5f6368;
+  margin: 0 0 0.75rem 0;
+}
+
+.word-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.word-tag {
+  padding: 0.25rem 0.75rem;
+  border-radius: 16px;
+  font-weight: 500;
+  transition: transform 0.2s;
+}
+
+.word-tag:hover {
+  transform: scale(1.05);
+}
+
+/* Responses List */
+.responses-list {
+  border-top: 1px solid #e8eaed;
+  padding-top: 1rem;
+}
+
+.responses-list h4 {
+  font-size: 0.875rem;
+  color: #5f6368;
+  margin: 0 0 0.75rem 0;
+}
+
+.response-items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.response-item {
+  padding: 0.5rem 0.75rem;
+  background: #f8f9fa;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+  color: #202124;
+}
+
+.response-more {
+  color: #5f6368;
+  font-style: italic;
+  padding: 0.5rem 0;
+}
+
+/* Recharts customization */
+.recharts-legend-item-text {
+  font-size: 0.875rem !important;
+  color: #202124 !important;
+}
+
+.recharts-tooltip-wrapper {
+  outline: none;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .question-chart-card {
+    padding: 1rem;
+  }
+
+  .question-meta {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}

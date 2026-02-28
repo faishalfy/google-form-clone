@@ -1,0 +1,175 @@
+/**
+ * SectionEditor Styles
+ * 
+ * LEVEL 4 FEATURE: Styling for multi-section form editor
+ */
+
+.section-editor {
+  background: var(--bg-primary, #fff);
+  border: 1px solid var(--border-color, #e0e0e0);
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 24px;
+}
+
+.section-editor-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.section-editor-title {
+  margin: 0;
+  font-size: 1.1rem;
+  color: var(--text-primary, #333);
+}
+
+/* Sections List */
+.sections-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sections-empty {
+  text-align: center;
+  padding: 24px;
+  color: var(--text-muted, #666);
+}
+
+.sections-empty p {
+  margin: 0 0 16px 0;
+}
+
+/* Section Item */
+.section-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  background: var(--bg-secondary, #f9f9f9);
+  border-radius: 8px;
+  transition: background 0.2s ease;
+}
+
+.section-item:hover {
+  background: var(--bg-hover, #f0f0f0);
+}
+
+.section-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+}
+
+.section-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--primary-color, #673ab7);
+  color: white;
+  font-size: 0.85rem;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.section-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.section-title {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text-primary, #333);
+}
+
+.section-description {
+  margin: 4px 0 0 0;
+  font-size: 0.85rem;
+  color: var(--text-muted, #666);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Section Actions */
+.section-actions {
+  display: flex;
+  gap: 4px;
+}
+
+.section-action-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border: none;
+  border-radius: 4px;
+  background: transparent;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+}
+
+.section-action-btn:hover:not(:disabled) {
+  background: var(--bg-tertiary, #e0e0e0);
+}
+
+.section-action-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.section-action-btn.danger:hover:not(:disabled) {
+  background: #ffebee;
+  color: #c62828;
+}
+
+/* Section Edit Form */
+.section-edit-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.section-edit-actions {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+}
+
+/* Add Section Form */
+.add-section-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+  padding-top: 8px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .section-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .section-actions {
+    align-self: flex-end;
+  }
+}
