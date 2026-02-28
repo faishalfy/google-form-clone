@@ -158,6 +158,11 @@ const FormDetailPage = () => {
               Manage Questions
             </Button>
           </Link>
+          <Link to={`/forms/${id}/analytics`}>
+            <Button variant="secondary" size="small">
+              📊 Analytics
+            </Button>
+          </Link>
           <Link to={`/forms/${id}/respond`}>
             <Button variant="primary" size="small">
               Fill Form
